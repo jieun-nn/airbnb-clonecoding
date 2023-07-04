@@ -1,0 +1,215 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    padding: 0 70px;
+    box-shadow: rgb(0 0 0 / 8%) 0 1px 0;
+}
+#logo {
+    height: 48px;
+    cursor: pointer;
+}
+#little-search {
+    display: flex;
+    justify-content: center;
+    padding: 0 8px;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 40px;
+    height: 48px;
+    box-sizing: border-box;
+    min-width: 330px;
+    box-shadow: 0 1px 2px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 5%);
+    cursor: pointer;
+}
+
+#little-search * {
+    cursor: pointer;
+}
+
+.little-search-button {
+    display: block;
+    flex-shrink: 0;
+    padding: 0 16px;
+    white-space: nowrap;
+    font-size: 14px;
+    font-weight: 600;
+    color: #343434;
+}
+
+.little-search-button:nth-of-type(3) {
+    color: #717171;
+}
+
+.divider {
+    flex-basis: 1px;
+    flex-shrink: 0;
+    display: block;
+    background-color: #ddd;
+    height: 24px;
+
+}
+
+#search-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ff385c;
+    flex-basis: 32px;
+    height: 32px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+#search {
+    height: 12px;
+}
+
+#header-right-section {
+    display: flex;
+    gap: 8px;
+}
+
+#do-airbnb {
+    padding: 18px 0;
+    font-size: 14px;
+    color: #222;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 22px;
+}
+
+#do-airbnb:hover {
+    background-color: #f7f7f7;
+}
+
+#lang-icon {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+
+#profile-section {
+    display: flex;
+    padding: 5px 5px 5px 12px;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 21px;
+    gap: 12px;
+}
+
+#profile-section:hover {
+    box-shadow: 0 2px 1px rgba(200, 200, 200, 20);
+}
+#category-bar {
+    display: flex;
+    gap: 37px;
+    padding: 20px 60px;
+    overflow: auto;
+}
+
+.active-img {
+    display: none;
+}
+
+#category-bar::-webkit-scrollbar {
+    display: none;
+}
+
+.category-button {
+    color: #a3a3a3;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.category-button img {
+    color: #717171;
+    width: 36px;
+}
+
+.category-button:hover {
+   color: #000;
+   border-bottom: 2px solid #ddd;
+}
+.category-button:hover .active-img {
+    display: inline-block;
+}
+.category-button:hover .inactive-img {
+    display: none;
+}
+
+#filter-section {
+    display: flex;
+    flex-shrink: 0;
+    padding: 5px;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    gap: 10px;
+}
+
+#active-category-button {
+    color: #000;
+    border-bottom: 2px solid #000;
+}
+
+#active-category-button .active-img {
+    display: inline-block;
+}
+
+#active-category-button .inactive-img {
+    display: none;
+}

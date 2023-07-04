@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <link rel="stylesheet" href="./index.css">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clone coding-airbnb</title>
+</head>
+<body>
+   <header>
+    <img id="logo" src="./images/airbnb-logo.png" alt="none">
+    <div id="little-search">
+        <button class="little-search-button">어디든지</button><span class="divider"></span>
+        <button class="little-search-button">언제든 일주일</button><span class="divider"></span>
+        <button class="little-search-button">게스트 추가</button>
+        <div id="search-wrapper">
+            <img id="search" src="./images/search.svg" alt="search">
+        </div>
+     </div>
+     <div id="header-right-section">
+        <div id="do-airbnb">
+            당신의 공간을 에어비앤비하세요
+        </div>
+        <div id="lang-icon">
+            <img src="./images/language.svg" alt="language">
+        </div>
+        <div id="profile-section">
+            <img width="16" src="./images/list.svg" alt="list-icon">
+            <img width="30" src="./images/profile.svg" alt="user-icon">
+        </div>
+     </div>
+   </header>
+   <div id="category-bar">
+    <button class="category-button" id="active-category-button">
+        <img class="inactive-img" src="images/Air conditioning.svg" alt="icon">
+        <img class="active-img" src="images/Air conditioning_black.svg" alt="icon">
+        <div>북극</div>
+    </button>
+    <button class="category-button">
+        <img class="inactive-img" src="images/Bed & breakfast.svg" alt="icon">
+        <img class="active-img" src="images/Bed & breakfast_black.svg" alt="icon">
+        <div>B&B</div>
+    </button>
+    <button class="category-button">
+        <img class="inactive-img" src="images/Beach area.svg" alt="icon">
+        <img class="active-img" src="images/Beach area_black.svg" alt="icon">
+        <div>해변 바로 앞</div>
+    </button>
+    <button class="category-button">
+        <img class="inactive-img" src="images/Cabin.svg" alt="icon">
+        <img class="active-img" src="images/Cabin_black.svg" alt="icon">
+        <div>통나무집</div>
+    </button>
+    <button class="category-button">
+        <img class="inactive-img" src="images/Campervan.svg" alt="icon">
+        <img class="active-img" src="images/Campervan_black.svg" alt="icon">
+        <div>캠핑카</div>
+    </button>
+    <button class="category-button">
+        <img class="inactive-img" src="images/Casa particular.svg" alt="icon">
+        <img class="active-img" src="images/Casa particular_black.svg" alt="icon">
+        <div>카사 파르티쿨라르</div>
+    </button>
+    <button class="category-button">
+        <img class="inactive-img" src="images/Cave.svg" alt="icon">
+        <img class="active-img" src="images/Cave_black.svg" alt="icon">
+        <div>동굴</div>
+    </button>
+    <button class="category-button">
+        <img class="inactive-img" src="images/Container.svg" alt="icon">
+        <img class="active-img" src="images/Container_black.svg" alt="icon">
+        <div>컨테이너하우스</div>
+    </button>
+    <button class="category-button">
+        <img class="inactive-img" src="images/Cycladic home.svg" alt="icon">
+        <img class="active-img" src="images/Cycladic home_black.svg" alt="icon">
+        <div>키클라데스 주택</div>
+    </button>
+    <button class="category-button">
+        <img class="inactive-img" src="images/Dammuso.svg" alt="icon">
+        <img class="active-img" src="images/Dammuso_black.svg" alt="icon">
+        <div>담무소</div>
+    </button>
+    <button class="category-button">
+        <img class="inactive-img" src="images/Dome.svg" alt="icon">
+        <img class="active-img" src="images/Dome_black.svg" alt="icon">
+        <div>돔하우스</div>
+    </button>
+    <button class="category-button">
+        <img class="inactive-img" src="images/Farm.svg" alt="icon">
+        <img class="active-img" src="images/Farm_black.svg" alt="icon">
+        <div>농장</div>
+    </button>
+    <button class="category-button">
+        <img class="inactive-img" src="images/Houseboat.svg" alt="icon">
+        <img class="active-img" src="images/Houseboat_black.svg" alt="icon">
+        <div>하우스보트</div>
+    </button>
+    <button class="category-button">
+        <img class="inactive-img" src="images/Lake area.svg" alt="icon">
+        <img class="active-img" src="images/Lake area_black.svg" alt="icon">
+        <div>호수근처</div>
+    </button>
+    <button class="category-button">
+        <img class="inactive-img" src="images/Minsu.svg" alt="icon">
+        <img class="active-img" src="images/Minsu_black.svg" alt="icon">
+        <div>민수</div>
+    </button>
+    <button class="category-button">
+        <img class="inactive-img" src="images/Piano.svg" alt="icon">
+        <img class="active-img" src="images/Piano_black.svg" alt="icon">
+        <div>그랜드피아노</div>
+    </button>
+    <button class="category-button">
+        <img class="inactive-img" src="images/Ryokan.svg" alt="icon">
+        <img class="active-img" src="images/Ryokan_black.svg" alt="icon">
+        <div>료칸</div>
+    </button>
+    <button class="category-button-2">
+        <img src="images/arrow_right.svg" alt="icon">
+    </button>
+    <div id="filter-section">
+        <img width="16" src="./images/filter.svg" alt="filter-icon">
+        <div>필터</div>
+    </div>
+   </div>
+</body>
+
+<script>
+    document.querySelectorAll('.category-button').forEach(button => {
+        button.addEventListener("click", event => {
+            document.querySelector("#active-category-button").removeAttribute('id')
+            button.setAttribute('id','active-category-button')
+        })
+    })
+    </script>
+</html>
