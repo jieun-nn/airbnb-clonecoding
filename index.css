@@ -268,3 +268,25 @@ header {
     transform: scale(0.5);
     transition: transform 0.25s ease;
   }
+
+  #floating-map-button {
+    position: fixed;
+    display: flex;
+    padding: 14px 19px;
+    align-items: center;
+    left: 50%;
+    bottom: 55px;
+    background-color: #222;
+    border-radius: 24px;
+    transform: translateX(-50%);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    gap: 8px;
+    cursor: pointer;
+  }
+
+  #floating-map-button:hover {
+    box-shadow: 0 0 0 1px transparent, 0 0 0 4px transparent, var(--cizosd) !important;
+    transform: translateX(-50%) scale(1.04);
+  }
